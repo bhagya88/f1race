@@ -1,0 +1,101 @@
+<nav id="side-nav">
+	<ul>
+		<li>
+			<span>Drivers</span>
+		</li>
+		<li>
+			<span>Teams</span>
+		</li>
+		<li>
+			<span>Races</span>
+		</li>
+	</ul>
+</nav>
+
+
+  <section id="main">
+
+  		
+ <header> 
+  <div class="container-fluid">
+    
+    <div class="row-fluid ">
+     
+        <ul class="breadcrumb">
+          <li> F-1 Feede</li>
+          <li >Drivers</li>
+        </ul>
+
+        <input type="text"  placeholder="Search...">
+        
+     
+    </div>
+  </div>
+</header>
+
+
+ <ng-view>
+
+<div class="container-fluid ">
+  <div class="row-fluid">
+       <h2 class="main-titling">Drivers Championship</h2>
+      
+        <div>
+          
+          <table class="table table-striped table-bordered box list-table">
+            <thead>
+              <tr>
+                <th colspan="4" class="tab-header tb-header-drivers">Drivers Championship Standings - 2013</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <!-- ngRepeat: driver in driversList | filter: searchFilter -->
+              
+              <tr ng-repeat="driver in driversList | filter: searchFilter" >
+
+                <td><strong class="ng-binding">1</strong></td>
+
+                <td><img src="images/flags/German.png">
+                	<strong>
+	                	<a href="#/drivers/vettel" class="ng-binding">
+        							Sebastian&nbsp;Vettel
+        						</a>
+        					</strong>
+        				</td>
+
+                <td><a href="#/teams/red_bull"><strong class="ng-binding">Red Bull</strong></a></td>
+                <td><strong class="ng-binding">397</strong></td>
+                
+                
+              </tr><tr ng-repeat="driver in driversList | filter: searchFilter" class="ng-scope">
+
+                <td><strong class="ng-binding">2</strong></td>
+
+                <td><img src="images/flags/Spanish.png">
+                	<strong>
+	                	<a href="#/drivers/alonso" class="ng-binding">
+        							Fernando&nbsp;Alonso
+        						</a>
+        					</strong>
+        				</td>
+
+              </tr>
+
+            </tbody>
+            
+           
+          </table>
+
+        </div>
+      </div>
+    </div>
+ 
+
+  
+
+
+</ng-view>
+  </section>
+
+
